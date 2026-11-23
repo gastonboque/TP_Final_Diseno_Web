@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Work+Sans:wght@300..900&display=swap');
+
+:root {
+  --color-fondo: #292c2b;
+  --color-texto: #f3f3f0;
+  --color-acento: #e9fd82;
+  --color-acento-claro: var(--color-acento);
+  --color-superficie: #343837;
+  --color-borde: #555b58;
+  --bs-border-color: var(--color-borde);
+}
+
+html {
+  font-size: 16px;
+}
+
+/* Estos son los colores generales de la página */
+body {
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  font-family: "Questrial", sans-serif;
+}
+
+.navbar {
+  background-color: var(--color-fondo);
+}
+
+.navbar .nav-link {
+  color: var(--color-texto);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--color-acento-claro);
+}
+
+.navbar-toggler {
+  border-color: var(--color-borde);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.navbar-brand {
+  color: var(--color-texto);
+  font-family: "Questrial", sans-serif;
+  font-size: 1.1rem;
+}
+
+.encabezado-principal {
+  background-color: var(--color-fondo);
+}
+
+.titulo-principal,
+.titulo-seccion,
+.modal-title {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 900;
+}
+
+.titulo-principal {
+  font-size: 3.5rem;
+}
+
+.bajada {
+  font-family: "Work Sans", sans-serif;
+  max-width: 42rem;
+}
+
+.etiqueta {
+  color: var(--color-acento-claro);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tarjeta-proyecto {
+  height: 22rem;
+  overflow: hidden;
+  background-color: transparent;
+  border-color: transparent !important;
+}
+
+#contenedor-proyectos {
+  background-color: var(--color-fondo);
+}
+
+.enlace-tarjeta {
+  position: relative;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  color: var(--color-texto);
+  text-decoration: none;
+}
+
+.anio-proyecto {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 1;
+  display: inline-block;
+  color: var(--color-texto);
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.9);
+}
+
+.imagen-tarjeta {
+  width: 100%;
+  height: 100%;
+}
+
+.imagen-tarjeta img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imagen-tarjeta .imagen-pendiente {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  border: 0;
+}
+
+.informacion-tarjeta {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(
+    to top,
+    rgba(41, 44, 43, 0.96),
+    rgba(41, 44, 43, 0.72) 48%,
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.texto-tarjeta {
+  width: 100%;
+  padding: 1rem;
+  color: var(--color-texto);
+}
+
+.tarjeta-proyecto:hover .informacion-tarjeta,
+.enlace-tarjeta:focus .informacion-tarjeta {
+  opacity: 1;
+}
+
+.enlace-tarjeta:focus {
+  outline: 0.2rem solid var(--color-acento);
+  outline-offset: -0.2rem;
+}
+
+.imagen-proyecto {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.375rem;
+}
+
+.proyecto-imagen {
+  background-color: var(--color-superficie);
+}
+
+.imagen-proyecto-destacada {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.proyecto-principal .imagen-pendiente {
+  height: 100%;
+  min-height: 32rem;
+  border: 0;
+}
+
+.proyecto-detalles {
+  background-color: var(--color-superficie);
+}
+
+.proyecto-detalles .titulo-principal {
+  font-size: 2.5rem;
+}
+
+.contenido-tarjeta {
+  width: 100%;
+}
+
+.numero-proyecto {
+  color: var(--color-acento-claro);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.enlace-proyecto {
+  color: var(--color-acento-claro);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+}
+
+.enlace-proyecto:hover {
+  color: var(--color-texto);
+}
+
+.imagen-pendiente {
+  display: flex;
+  min-height: 14rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-texto);
+  background-color: var(--color-superficie);
+  border: 1px dashed var(--color-borde);
+}
+
+.btn-dark {
+  color: var(--color-fondo);
+  background-color: var(--color-acento);
+  border-color: var(--color-acento);
+}
+
+.btn-dark:hover {
+  color: var(--color-texto);
+  background-color: var(--color-superficie);
+  border-color: var(--color-acento);
+}
+
+.boton-contacto-footer {
+  padding: 0;
+  color: var(--color-texto);
+  background: none;
+  border: 0;
+  text-align: left;
+  text-decoration: underline;
+  transition: color 0.25s ease;
+}
+
+.boton-contacto-footer:hover {
+  color: var(--color-acento-claro);
+}
+
+.modal-content {
+  color: var(--color-texto);
+  background-color: var(--color-superficie);
+}
+
+.btn-close {
+  filter: invert(1);
+}
+
+.form-control {
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  border-color: var(--color-borde);
+}
+
+.form-control:focus {
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  border-color: var(--color-acento-claro);
+}
+
+.experiencia-educacion {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.fila-cv {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.titulo-cv {
+  font-size: 1.25rem;
+}
+
+.entradas-cv {
+  grid-column: span 2;
+}
+
+.entrada-cv {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--color-borde);
+}
+
+.entrada-cv:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.nombre-cv {
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.fechas-cv {
+  color: #b7bfba;
+}
+
+@media (max-width: 991.98px) {
+  .proyecto-detalles .titulo-principal {
+    font-size: 2rem;
+  }
+
+  .proyecto-principal .imagen-pendiente {
+    min-height: 20rem;
+  }
+
+  .fila-cv {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .fila-cv {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .entradas-cv {
+    grid-column: auto;
+  }
+
+  .entrada-cv {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}

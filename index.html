@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio de Gastón Boqué Undiano</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg border-bottom">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#inicio">Gastón Boqué</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu-principal"
+          aria-controls="menu-principal"
+          aria-expanded="false"
+          aria-label="Abrir menú de navegación"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu-principal">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#proyectos">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experiencia">Experiencia y Educación</a>
+            </li>
+            <li class="nav-item">
+              <button
+                class="btn btn-dark ms-lg-2"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-contacto"
+              >
+                Contacto
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header id="inicio" class="encabezado-principal border-bottom">
+      <div class="container py-5">
+        <p class="etiqueta mb-3">Diseño integral · Portfolio</p>
+        <h1 class="titulo-principal mb-3">Hola, soy Gastón.</h1>
+        <p class="lead bajada mb-4">
+          Estos son algunos de mis proyectos como diseñador integral.
+        </p>
+        <a class="btn btn-dark" href="#proyectos">
+          Ver proyectos
+          <i class="bi bi-arrow-down-right" aria-hidden="true"></i>
+        </a>
+      </div>
+    </header>
+
+    <main class="py-5">
+      <section id="proyectos" class="mb-5" aria-labelledby="titulo-proyectos">
+        <div class="container">
+          <div class="row mb-4">
+            <div class="col-12 col-lg-8">
+              <p class="etiqueta mb-2">Trabajos seleccionados</p>
+              <h2 id="titulo-proyectos" class="titulo-seccion">Proyectos</h2>
+            </div>
+            <div class="col-12 col-lg-4">
+              <p class="mb-0">
+                Una selección de proyectos de distintas áreas del diseño.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid px-0">
+          <div
+            id="contenedor-proyectos"
+            class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-0"
+          ></div>
+        </div>
+      </section>
+
+      <section id="sobre-mi" class="container sobre-mi border-top pt-5">
+        <div class="row">
+          <div class="col-12 col-lg-8">
+            <p class="etiqueta mb-2">Sobre mí</p>
+            <h2 class="titulo-seccion mb-3">Diseño integral</h2>
+            <p class="mb-0">
+              Este portfolio reúne proyectos de distintas áreas del diseño,
+              desde sistemas y espacios hasta identidad visual, producto y
+              comunicación.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="experiencia"
+        class="container experiencia-educacion border-top pt-5 mt-5"
+        aria-labelledby="titulo-experiencia"
+      >
+        <div class="fila-cv">
+          <h2 id="titulo-experiencia" class="titulo-seccion titulo-cv">
+            Experiencia
+          </h2>
+          <div class="entradas-cv">
+            <article class="entrada-cv">
+              <h3 class="nombre-cv">Diseñador autónomo</h3>
+              <div class="detalle-cv">
+                <p class="mb-1">Freelance</p>
+                <p class="fechas-cv mb-3">Agosto 2024 – Actualidad</p>
+                <p class="mb-0">
+                  Trabajo de diseño freelance para diferentes proyectos,
+                  vinculados a motion graphics e identidades visuales
+                  (branding).
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="fila-cv">
+          <h2 class="titulo-seccion titulo-cv">Educación</h2>
+          <div class="entradas-cv">
+            <article class="entrada-cv">
+              <h3 class="nombre-cv">Universidad Torcuato Di Tella</h3>
+              <div class="detalle-cv">
+                <p class="mb-1">Diseño</p>
+                <p class="fechas-cv mb-0">2023 – 2027</p>
+              </div>
+            </article>
+            <article class="entrada-cv">
+              <h3 class="nombre-cv">Universidad de Buenos Aires</h3>
+              <div class="detalle-cv">
+                <p class="mb-1">Diseño Gráfico</p>
+                <p class="fechas-cv mb-0">2023 – 2025</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-top py-4">
+      <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2">
+        <p class="mb-0">Gastón Boqué Undiano · Portfolio</p>
+        <button
+          class="boton-contacto-footer"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#modal-contacto"
+        >
+          Escribime
+        </button>
+      </div>
+    </footer>
+
+    <div
+      class="modal fade"
+      id="modal-contacto"
+      tabindex="-1"
+      aria-labelledby="titulo-modal-contacto"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="titulo-modal-contacto">Contacto</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form
+              id="formulario-contacto"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              class="needs-validation"
+              novalidate
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="a5aa3f31-55c7-4923-b06c-0503b67e9f59"
+              />
+
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                  name="name"
+                  required
+                />
+                <div class="invalid-feedback">Completá tu nombre.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  required
+                />
+                <div class="invalid-feedback">Ingresá un email válido.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea
+                  class="form-control"
+                  id="mensaje"
+                  name="message"
+                  rows="4"
+                  required
+                ></textarea>
+                <div class="invalid-feedback">Escribí un mensaje.</div>
+              </div>
+
+              <button type="submit" class="btn btn-dark">Enviar mensaje</button>
+              <div
+                id="mensaje-formulario"
+                class="d-none mt-3"
+                role="status"
+                aria-live="polite"
+              ></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/code.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+[
+  {
+    "titulo": "Ronda",
+    "anio": 2026,
+    "descripcion": "Sistema de encuentro universitario que combina mobiliario, señalética y una app con carteleras en tiempo real.",
+    "detalles": "Diseño de Sistemas, Espacios y Producto",
+    "pagina": "proyectos/ronda.html",
+    "imagen": "img/ronda-modulos-en-uso.jpg"
+  },
+  {
+    "titulo": "+Simple",
+    "anio": 2026,
+    "descripcion": "Video explicativo y animación de interfaz para una plataforma logística impulsada por IA.",
+    "detalles": "Motion Graphics",
+    "pagina": "proyectos/simple.html",
+    "imagen": "img/simple-tarjeta.png"
+  },
+  {
+    "titulo": "Desplazados",
+    "anio": 2024,
+    "descripcion": "Infografía expandida sobre las causas y efectos de la gentrificación y el desplazamiento urbano.",
+    "detalles": "Diseño de Información y Visualización de Datos",
+    "pagina": "proyectos/desplazados.html",
+    "imagen": "img/desplazados-portada.jpg"
+  },
+  {
+    "titulo": "El bloqueo de Ormuz y la crisis del petróleo",
+    "anio": 2026,
+    "descripcion": "Infografía sobre el bloqueo del estrecho de Ormuz y sus efectos geopolíticos y económicos.",
+    "detalles": "Esquematización y Visualización de Información",
+    "pagina": "proyectos/ormuz.html",
+    "imagen": "img/ormuz-tarjeta.jpg"
+  },
+  {
+    "titulo": "Brote",
+    "anio": 2025,
+    "descripcion": "Guante wearable asistido por IA para facilitar las tareas del agricultor urbano del futuro.",
+    "detalles": "Diseño Especulativo y Producto",
+    "pagina": "proyectos/brote.html",
+    "imagen": "img/brote-poster.jpg"
+  },
+  {
+    "titulo": "DEBUGGED",
+    "anio": 2024,
+    "descripcion": "Identidad visual y sistema gráfico para un centro cultural dedicado al videojuego.",
+    "detalles": "Identidad Visual y Branding",
+    "pagina": "proyectos/debugged.html",
+    "imagen": "img/debugged-citylight.jpg"
+  },
+  {
+    "titulo": "Espicular",
+    "anio": 2025,
+    "descripcion": "Juego modular, packaging y manual inspirados en la esponja de cristal marina.",
+    "detalles": "Diseño de Producto y Packaging",
+    "pagina": "proyectos/espicular.html",
+    "imagen": "img/espicular-01.jpg"
+  },
+  {
+    "titulo": "Fanzine Sakamoto",
+    "anio": 2024,
+    "descripcion": "Fanzine sobre la obra, el activismo, la naturaleza y el legado sonoro de Ryuichi Sakamoto.",
+    "detalles": "Diseño Editorial",
+    "pagina": "proyectos/fanzine-sakamoto.html",
+    "imagen": "img/fanzine-sakamoto-tapa.jpg"
+  },
+  {
+    "titulo": "Kubo",
+    "anio": 2025,
+    "descripcion": "Identidad visual y comunicación para una marca de mobiliario modular y sustentable.",
+    "detalles": "Branding e Identidad Visual",
+    "pagina": "proyectos/kubo.html",
+    "imagen": "img/kubo-portada.jpg"
+  },
+  {
+    "titulo": "Caleidoscopio Casero",
+    "anio": 2026,
+    "descripcion": "Gráfica instructiva que reutiliza un rollo de cocina para enseñar a armar un caleidoscopio.",
+    "detalles": "Diseño de Información e Ilustración",
+    "pagina": "proyectos/caleidoscopio-casero.html",
+    "imagen": "img/caleidoscopio-instructivo-en-uso.png"
+  }
+]

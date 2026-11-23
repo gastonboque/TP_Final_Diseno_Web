@@ -1,0 +1,21 @@
+
+[
+  {
+    "titulo": "Nuestra parte de noche",
+    "destino": "https://es.wikipedia.org/wiki/Nuestra_parte_de_noche",
+    "descripcion": "Una monumental novela de terror gótico y político ambientada durante la última dictadura militar argentina. Sigue la historia de un padre y su hijo que huyen de una sociedad secreta conocida como la Orden.",
+    "imagen": "img/nuestra-parte-de-noche.jpg"
+  },
+  {
+    "titulo": "Cómo desaparecer completamente",
+    "destino": "https://es.wikipedia.org/wiki/C%C3%B3mo_desaparecer_completamente",
+    "descripcion": "Una novela ambientada durante la crisis económica argentina de 2001, que retrata la vida de un adolescente marginado que lucha contra un entorno familiar violento y asfixiante en los suburbios.",
+    "imagen": "img/como-desaparecer-completamente.jpg"
+  },
+  {
+    "titulo": "Chicos que vuelven",
+    "destino": "https://www.lecturalia.com/libro/88620/chicos-que-vuelven",
+    "descripcion": "Una inquietante historia de terror sobrenatural en la que niños que habían sido denunciados como desaparecidos comienzan a reaparecer misteriosamente en una ciudad, desatando confusión y miedo.",
+    "imagen": "img/chicos-que-vuelven.jpg"
+  }
+]
