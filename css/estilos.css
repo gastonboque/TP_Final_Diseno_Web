@@ -67,8 +67,6 @@ body {
   color: var(--color-acento-claro);
   font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .tarjeta-proyecto {
@@ -151,10 +149,6 @@ body {
   opacity: 1;
 }
 
-.enlace-tarjeta:focus {
-  outline: 0.2rem solid var(--color-acento);
-}
-
 .imagen-proyecto {
   display: block;
   width: 100%;
@@ -201,7 +195,6 @@ body {
   font-size: 0.85rem;
   font-weight: 700;
   text-decoration: none;
-  text-transform: uppercase;
   transition: color 0.25s ease;
 }
 
@@ -295,5 +288,4 @@ body {
   .proyecto-principal .imagen-pendiente {
     min-height: 20rem;
   }
-
 }
