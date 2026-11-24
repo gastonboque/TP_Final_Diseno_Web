@@ -5,9 +5,11 @@ let contenedor = document.querySelector("#contenedor-proyectos");
 fetch("js/proyectos.json")
   .then(respuesta => respuesta.json())
   .then(datos => {
+    let htmlAcumulado = "";
+
     // Aca recorro cada proyecto del json y armo las tarjetas
     datos.forEach(proyecto => {
-      contenedor.innerHTML += `
+      htmlAcumulado += `
         <div class="col">
           <article class="tarjeta-proyecto">
             <a
@@ -30,6 +32,8 @@ fetch("js/proyectos.json")
         </div>
       `;
     });
+
+    contenedor.innerHTML = htmlAcumulado;
   });
 
 // Constantes para la validación del formulario
