@@ -5,22 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio de Gastón Boqué Undiano</title>
 
+    <!-- Aca conecto los estilos de bootstrap -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
     />
+    
+    <!-- Aca conecto los iconos de bootstrap -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
     />
+    <!-- Aca conecto el css-->
     <link rel="stylesheet" href="css/estilos.css" />
   </head>
 
   <body>
+    <!-- Aca armo la Navbar que se colapsa cuando se achica la pantalla en menu hamburguesa-->
     <nav class="navbar navbar-expand-lg navbar-dark border-bottom">
       <div class="container">
         <a class="navbar-brand fw-bold" href="#inicio">Gastón Boqué</a>
 
+        <!-- Aca pongo el boton hamburguesa para cuando se achica la pantalla -->
         <button
           class="navbar-toggler"
           type="button"
@@ -33,6 +39,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- Aca pongo los enlaces internos de navegacion y el boton que abre el modal -->
         <div class="collapse navbar-collapse" id="menu-principal">
           <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
             <li class="nav-item">
@@ -62,6 +69,7 @@
       </div>
     </nav>
 
+    <!-- Aca armo el encabezado introductorio con encabezado, parrafo, y boton ancla que lleva a la seccion de proyectos -->
     <header id="inicio" class="encabezado-principal border-bottom">
       <div class="container py-5">
         <p class="etiqueta mb-3">Diseño integral · Portfolio</p>
@@ -76,7 +84,10 @@
       </div>
     </header>
 
+    <!-- Aca empieza el contenido principal de la pagina con tres secciones -->
     <main class="py-5">
+
+      <!-- Aca pongo la Seccion 1 de proyectos -->
       <section id="proyectos" class="mb-5" aria-labelledby="titulo-proyectos">
         <div class="container">
           <div class="row mb-4">
@@ -91,6 +102,7 @@
             </div>
           </div>
         </div>
+        <!-- Aca dejo el contenedor vacio con grilla responsiva donde JavaScript carga las tarjetas desde el json -->
         <div class="container-fluid px-0">
           <div
             id="contenedor-proyectos"
@@ -99,6 +111,7 @@
         </div>
       </section>
 
+      <!-- Aca pongo Seccion 2 Sobre mi -->
       <section id="sobre-mi" class="container sobre-mi border-top pt-5">
         <div class="row">
           <div class="col-12 col-lg-8">
@@ -113,11 +126,13 @@
         </div>
       </section>
 
+      <!-- Aca pongo Seccion 3 de Experiencia y educacion con cols y rows, que tienen flex-->
       <section
         id="experiencia"
         class="container experiencia-educacion border-top pt-5 mt-5 d-flex flex-column gap-4"
         aria-labelledby="titulo-experiencia"
       >
+        <!-- Aca armo el bloque de experiencia laboral -->
         <div class="fila-cv row g-3">
           <h2 id="titulo-experiencia" class="titulo-seccion titulo-cv col-12 col-md-4">
             Experiencia
@@ -138,6 +153,7 @@
           </div>
         </div>
 
+        <!-- Aca armo el bloque de educacion-->
         <div class="fila-cv row g-3">
           <h2 class="titulo-seccion titulo-cv col-12 col-md-4">Educación</h2>
           <div class="entradas-cv col-12 col-md-8">
@@ -160,6 +176,7 @@
       </section>
     </main>
 
+    <!-- Aca pongo el footer con mi nombre , portfolio y el modal de contacto de vuelta.-->
     <footer class="border-top py-4">
       <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2">
         <p class="mb-0">Gastón Boqué Undiano · Portfolio</p>
@@ -174,6 +191,7 @@
       </div>
     </footer>
 
+    <!-- Aca armo el modal de contacto personalizado, que esta conectado a Web3Forms, a través de la key-->
     <div
       class="modal fade"
       id="modal-contacto"
@@ -206,7 +224,7 @@
                 name="access_key"
                 value="a5aa3f31-55c7-4923-b06c-0503b67e9f59"
               />
-
+              <!-- Acá armo la casilla para poner el nombre -->
               <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
                 <input
@@ -216,9 +234,10 @@
                   name="name"
                   required
                 />
+                <!-- Acá va el mensaje de validación del nombre si no esta completado -->
                 <div class="invalid-feedback">Completá tu nombre.</div>
               </div>
-
+              <!-- Acá armo la casilla para poner el mail -->
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input
@@ -228,9 +247,12 @@
                   name="email"
                   required
                 />
+
+                <!-- Acá va el mensaje de validación si el mail no es válido -->
                 <div class="invalid-feedback">Ingresá un email válido.</div>
               </div>
 
+              <!-- Acá armo la casilla para poner el mensaje -->
               <div class="mb-3">
                 <label for="mensaje" class="form-label">Mensaje</label>
                 <textarea
@@ -240,11 +262,15 @@
                   rows="4"
                   required
                 ></textarea>
+                <!-- Acá va el mensaje de validación si la casilla de mensaje está vacia-->
                 <div class="invalid-feedback">Escribí un mensaje.</div>
               </div>
 
+              <!-- Acá armo el botón para enviar el mensaje -->
               <button type="submit" class="btn btn-dark">Enviar mensaje</button>
             </form>
+
+            <!-- Acá pongo el mensaje de respuesta del formulario estádar de Bootstrap -->
             <div
               id="mensaje-formulario"
               class="alert d-none mt-3"
@@ -256,7 +282,10 @@
       </div>
     </div>
 
+    <!-- Aca conecto con Bootstrap para javascript y elementos interactivos-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Aca conecto con el archivo de javascript-->
     <script src="js/code.js"></script>
   </body>
 </html>

@@ -1,10 +1,11 @@
+// Aca selecciono el contenedor vacio donde se van a cargar los proyectos del json
 let contenedor = document.querySelector("#contenedor-proyectos");
 
-// Aca conecto el JSON con las cards
+// Aca conecto los proyectos del json con las tarjetas
 fetch("js/proyectos.json")
   .then(respuesta => respuesta.json())
   .then(datos => {
-    // Aca armo las cards de los proyectos
+    // Aca recorro cada proyecto del json y armo las tarjetas
     datos.forEach(proyecto => {
       contenedor.innerHTML += `
         <div class="col">
@@ -29,28 +30,27 @@ fetch("js/proyectos.json")
         </div>
       `;
     });
-  })
-  .catch(error => {
-    console.error("No se pudieron cargar los proyectos:", error);
-    contenedor.innerHTML =
-      '<p class="text-danger mb-0">No se pudieron cargar los proyectos.</p>';
   });
 
+// Constantes para la validación del formulario
 const forms = document.querySelectorAll(".needs-validation");
 const mensajeFormulario = document.querySelector("#mensaje-formulario");
 
+// Aca valido el formulario de contacto
 forms.forEach((form) => {
   form.addEventListener("submit", (e) => {
+    // Si falta completar algo o esta mal escrito se frena el envio
     if (!form.checkValidity()) {
       e.preventDefault();
       e.stopPropagation();
     } else {
-      // Si el formulario es válido, mostramos el mensaje en el div de abajo
+      // Si el formulario es válido, muestro el mensaje en el div de abajo
       mensajeFormulario.classList.remove("d-none");
       mensajeFormulario.classList.add("alert-success");
       mensajeFormulario.textContent = "Gracias, recibimos tu mensaje.";
     }
 
+    // Aca activo los estilos visuales estandar de validacion de bootstrap
     form.classList.add("was-validated");
   });
 });
