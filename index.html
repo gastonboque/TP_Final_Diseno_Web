@@ -17,7 +17,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg border-bottom">
+    <nav class="navbar navbar-expand-lg navbar-dark border-bottom">
       <div class="container">
         <a class="navbar-brand fw-bold" href="#inicio">Gastón Boqué</a>
 
@@ -115,17 +115,17 @@
 
       <section
         id="experiencia"
-        class="container experiencia-educacion border-top pt-5 mt-5"
+        class="container experiencia-educacion border-top pt-5 mt-5 d-flex flex-column gap-4"
         aria-labelledby="titulo-experiencia"
       >
-        <div class="fila-cv">
-          <h2 id="titulo-experiencia" class="titulo-seccion titulo-cv">
+        <div class="fila-cv row g-3">
+          <h2 id="titulo-experiencia" class="titulo-seccion titulo-cv col-12 col-md-4">
             Experiencia
           </h2>
-          <div class="entradas-cv">
-            <article class="entrada-cv">
-              <h3 class="nombre-cv">Diseñador autónomo</h3>
-              <div class="detalle-cv">
+          <div class="entradas-cv col-12 col-md-8">
+            <article class="entrada-cv row g-3">
+              <h3 class="nombre-cv col-12 col-md-6">Diseñador autónomo</h3>
+              <div class="detalle-cv col-12 col-md-6">
                 <p class="mb-1">Freelance</p>
                 <p class="fechas-cv mb-3">Agosto 2024 – Actualidad</p>
                 <p class="mb-0">
@@ -138,19 +138,19 @@
           </div>
         </div>
 
-        <div class="fila-cv">
-          <h2 class="titulo-seccion titulo-cv">Educación</h2>
-          <div class="entradas-cv">
-            <article class="entrada-cv">
-              <h3 class="nombre-cv">Universidad Torcuato Di Tella</h3>
-              <div class="detalle-cv">
+        <div class="fila-cv row g-3">
+          <h2 class="titulo-seccion titulo-cv col-12 col-md-4">Educación</h2>
+          <div class="entradas-cv col-12 col-md-8">
+            <article class="entrada-cv row g-3">
+              <h3 class="nombre-cv col-12 col-md-6">Universidad Torcuato Di Tella</h3>
+              <div class="detalle-cv col-12 col-md-6">
                 <p class="mb-1">Diseño</p>
                 <p class="fechas-cv mb-0">2023 – 2027</p>
               </div>
             </article>
-            <article class="entrada-cv">
-              <h3 class="nombre-cv">Universidad de Buenos Aires</h3>
-              <div class="detalle-cv">
+            <article class="entrada-cv row g-3">
+              <h3 class="nombre-cv col-12 col-md-6">Universidad de Buenos Aires</h3>
+              <div class="detalle-cv col-12 col-md-6">
                 <p class="mb-1">Diseño Gráfico</p>
                 <p class="fechas-cv mb-0">2023 – 2025</p>
               </div>
@@ -187,10 +187,11 @@
             <h2 class="modal-title fs-5" id="titulo-modal-contacto">Contacto</h2>
             <button
               type="button"
-              class="btn-close"
+              class="btn btn-dark"
               data-bs-dismiss="modal"
-              aria-label="Cerrar"
-            ></button>
+            >
+              Cerrar
+            </button>
           </div>
           <div class="modal-body">
             <form

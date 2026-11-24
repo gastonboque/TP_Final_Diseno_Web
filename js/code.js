@@ -4,27 +4,18 @@ let contenedor = document.querySelector("#contenedor-proyectos");
 fetch("js/proyectos.json")
   .then(respuesta => respuesta.json())
   .then(datos => {
-    if (datos.length === 0) {
-      throw new Error("El archigitvo de proyectos está vacío o no tiene el formato esperado.");
-    }
-
     // Aca armo las cards de los proyectos
     datos.forEach(proyecto => {
       contenedor.innerHTML += `
         <div class="col">
-          <article class="tarjeta-proyecto border">
+          <article class="tarjeta-proyecto">
             <a
               class="enlace-tarjeta"
               href="${proyecto.pagina}"
               aria-label="Ver proyecto: ${proyecto.titulo}"
             >
-              <span class="anio-proyecto">${proyecto.anio}</span>
               <div class="imagen-tarjeta">
-                ${
-                  proyecto.imagen
-                    ? `<img src="${proyecto.imagen}" alt="" loading="lazy">`
-                    : '<div class="imagen-pendiente mb-0">Imagen pendiente</div>'
-                }
+                <img src="${proyecto.imagen}" alt="${proyecto.titulo}">
               </div>
               <div class="informacion-tarjeta">
                 <div class="texto-tarjeta">
@@ -32,6 +23,7 @@ fetch("js/proyectos.json")
                   <p class="mb-0">${proyecto.descripcion}</p>
                 </div>
               </div>
+              <span class="anio-proyecto">${proyecto.anio}</span>
             </a>
           </article>
         </div>
@@ -55,15 +47,6 @@ formulario.addEventListener("submit", async evento => {
     return;
   }
 
-  const claveAcceso = formulario.querySelector('input[name="access_key"]').value.trim();
-
-  if (!claveAcceso || claveAcceso === "PEGAR_TU_ACCESS_KEY") {
-    mensajeFormulario.className = "alert alert-warning mt-3";
-    mensajeFormulario.textContent =
-      "Configurá tu clave de Web3Forms antes de enviar el formulario.";
-    return;
-  }
-
   const botonEnviar = formulario.querySelector('button[type="submit"]');
   botonEnviar.disabled = true;
   mensajeFormulario.className = "alert alert-info mt-3";
@@ -73,25 +56,24 @@ formulario.addEventListener("submit", async evento => {
     const respuesta = await fetch(formulario.action, {
       method: "POST",
       body: new FormData(formulario),
-      headers: { Accept: "application/json" },
+      headers: { Accept: "application/json" }
     });
     const resultado = await respuesta.json();
 
-    if (!respuesta.ok || !resultado.success) {
-      throw new Error(resultado.message || "No se pudo enviar el mensaje.");
+    if (respuesta.ok && resultado.success) {
+      formulario.reset();
+      formulario.classList.remove("was-validated");
+      mensajeFormulario.className = "alert alert-success mt-3";
+      mensajeFormulario.textContent = "Gracias, recibimos tu mensaje.";
+    } else {
+      mensajeFormulario.className = "alert alert-danger mt-3";
+      mensajeFormulario.textContent = "No se pudo enviar el mensaje. Intentá nuevamente.";
     }
-
-    formulario.reset();
-    formulario.classList.remove("was-validated");
-    mensajeFormulario.className = "alert alert-success mt-3";
-    mensajeFormulario.textContent = "Gracias, recibimos tu mensaje.";
   } catch (error) {
+    console.error("Error al enviar el formulario:", error);
     mensajeFormulario.className = "alert alert-danger mt-3";
-    mensajeFormulario.textContent =
-      error instanceof Error
-        ? `No se pudo enviar el mensaje: ${error.message}`
-        : "No se pudo enviar el mensaje. Intentá nuevamente.";
-  } finally {
-    botonEnviar.disabled = false;
+    mensajeFormulario.textContent = "No se pudo enviar el mensaje. Intentá nuevamente.";
   }
+
+  botonEnviar.disabled = false;
 });

@@ -7,7 +7,6 @@
   --color-acento-claro: var(--color-acento);
   --color-superficie: #343837;
   --color-borde: #555b58;
-  --bs-border-color: var(--color-borde);
 }
 
 html {
@@ -36,10 +35,6 @@ body {
 
 .navbar-toggler {
   border-color: var(--color-borde);
-}
-
-.navbar-toggler-icon {
-  filter: invert(1);
 }
 
 .navbar-brand {
@@ -78,9 +73,7 @@ body {
 
 .tarjeta-proyecto {
   height: 22rem;
-  overflow: hidden;
-  background-color: transparent;
-  border-color: transparent !important;
+  background-color: var(--color-superficie);
 }
 
 #contenedor-proyectos {
@@ -91,7 +84,6 @@ body {
   position: relative;
   display: block;
   height: 100%;
-  overflow: hidden;
   color: var(--color-texto);
   text-decoration: none;
 }
@@ -100,25 +92,28 @@ body {
   position: absolute;
   top: 0.75rem;
   left: 0.75rem;
-  z-index: 1;
   display: inline-block;
   color: var(--color-texto);
   font-family: "Work Sans", sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.9);
 }
 
 .imagen-tarjeta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
 }
 
 .imagen-tarjeta img {
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}ject-fit: cover;
 }
 
 .imagen-tarjeta .imagen-pendiente {
@@ -159,7 +154,6 @@ body {
 
 .enlace-tarjeta:focus {
   outline: 0.2rem solid var(--color-acento);
-  outline-offset: -0.2rem;
 }
 
 .imagen-proyecto {
@@ -257,10 +251,6 @@ body {
   background-color: var(--color-superficie);
 }
 
-.btn-close {
-  filter: invert(1);
-}
-
 .form-control {
   color: var(--color-texto);
   background-color: var(--color-fondo);
@@ -273,30 +263,11 @@ body {
   border-color: var(--color-acento-claro);
 }
 
-.experiencia-educacion {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.fila-cv {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
-}
-
 .titulo-cv {
   font-size: 1.25rem;
 }
 
-.entradas-cv {
-  grid-column: span 2;
-}
-
 .entrada-cv {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
   padding: 1.25rem 0;
   border-top: 1px solid var(--color-borde);
 }
@@ -326,23 +297,4 @@ body {
     min-height: 20rem;
   }
 
-  .fila-cv {
-    grid-template-columns: 1fr 2fr;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .fila-cv {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-  }
-
-  .entradas-cv {
-    grid-column: auto;
-  }
-
-  .entrada-cv {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
 }
