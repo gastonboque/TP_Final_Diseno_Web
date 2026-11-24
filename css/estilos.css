@@ -130,7 +130,7 @@ body {
   left: 0;
   display: flex;
   align-items: flex-end;
-  background: linear-gradient(
+  background-image: linear-gradient(
     to top,
     rgba(41, 44, 43, 0.96),
     rgba(41, 44, 43, 0.72) 48%,

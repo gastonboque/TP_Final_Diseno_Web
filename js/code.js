@@ -36,44 +36,21 @@ fetch("js/proyectos.json")
       '<p class="text-danger mb-0">No se pudieron cargar los proyectos.</p>';
   });
 
-const formulario = document.querySelector("#formulario-contacto");
+const forms = document.querySelectorAll(".needs-validation");
 const mensajeFormulario = document.querySelector("#mensaje-formulario");
 
-formulario.addEventListener("submit", async evento => {
-  evento.preventDefault();
-  formulario.classList.add("was-validated");
-
-  if (!formulario.checkValidity()) {
-    return;
-  }
-
-  const botonEnviar = formulario.querySelector('button[type="submit"]');
-  botonEnviar.disabled = true;
-  mensajeFormulario.className = "alert alert-info mt-3";
-  mensajeFormulario.textContent = "Enviando mensaje...";
-
-  try {
-    const respuesta = await fetch(formulario.action, {
-      method: "POST",
-      body: new FormData(formulario),
-      headers: { Accept: "application/json" }
-    });
-    const resultado = await respuesta.json();
-
-    if (respuesta.ok && resultado.success) {
-      formulario.reset();
-      formulario.classList.remove("was-validated");
-      mensajeFormulario.className = "alert alert-success mt-3";
-      mensajeFormulario.textContent = "Gracias, recibimos tu mensaje.";
+forms.forEach((form) => {
+  form.addEventListener("submit", (e) => {
+    if (!form.checkValidity()) {
+      e.preventDefault();
+      e.stopPropagation();
     } else {
-      mensajeFormulario.className = "alert alert-danger mt-3";
-      mensajeFormulario.textContent = "No se pudo enviar el mensaje. Intentá nuevamente.";
+      // Si el formulario es válido, mostramos el mensaje en el div de abajo
+      mensajeFormulario.classList.remove("d-none");
+      mensajeFormulario.classList.add("alert-success");
+      mensajeFormulario.textContent = "Gracias, recibimos tu mensaje.";
     }
-  } catch (error) {
-    console.error("Error al enviar el formulario:", error);
-    mensajeFormulario.className = "alert alert-danger mt-3";
-    mensajeFormulario.textContent = "No se pudo enviar el mensaje. Intentá nuevamente.";
-  }
 
-  botonEnviar.disabled = false;
+    form.classList.add("was-validated");
+  });
 });
